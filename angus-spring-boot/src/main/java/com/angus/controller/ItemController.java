@@ -1,7 +1,7 @@
 package com.angus.controller;
 
-import com.javachen.model.Item;
-import com.javachen.repository.ItemRepository;
+import com.angus.model.Item;
+import com.angus.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
@@ -22,9 +22,12 @@ public class ItemController {
   }
 
   @RequestMapping(method = RequestMethod.POST)
-  public Item addItem(@RequestBody Item item) {
-    item.setId(null);
-    return repo.saveAndFlush(item);
+  public Item addItem(/**@RequestBody Item item*/) {
+    //item.setId(null);
+    Item i = new Item();
+    i.setChecked(true);
+    i.setDescription("test");
+    return repo.saveAndFlush(i);
   }
 
   @RequestMapping(value = "/{id}", method = RequestMethod.PUT)

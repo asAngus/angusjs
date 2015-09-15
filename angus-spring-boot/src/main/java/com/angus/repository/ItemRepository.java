@@ -1,6 +1,6 @@
 package com.angus.repository;
 
-import com.javachen.model.Item;
+import com.angus.model.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
