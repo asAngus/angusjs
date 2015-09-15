@@ -4,3 +4,7 @@ bower_components/
 .idea/
 .tmp/
 dist/
+.gradle/
+build/
+run/
+*.iml
