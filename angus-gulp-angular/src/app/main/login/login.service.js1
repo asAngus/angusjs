@@ -1,4 +1,6 @@
 (function (angular) {
+    'use strict';
+    /** @ngInject */
     var ItemFactory = function ($resource) {
         return $resource('http://192.168.1.4:8080/reset/:id', {
             id: '@id'
@@ -13,5 +15,5 @@
     };
 
     ItemFactory.$inject = ['$resource'];
-    angular.module("myApp.services").factory("Item", ItemFactory);
+    angular.module("angusGulpAngular").factory("Item", ItemFactory);
 }(angular));
